@@ -62,5 +62,25 @@ string [] WritingToNewArray (string [] array, string [] newarray) //Заполн
     return newarray;
 }
 
+void PrintArray (string [] array) // функция вывода массива через запятую
+{
+    for (int i = 0; i < array.Length; i++)
+    {
+       Console.Write (array[i] + ", ");
+    }
+    Console.WriteLine ();
 
+}
+
+
+
+
+Console.Write ("Введите длину массива:");//Запрос размера массива
+int size = Convert.ToInt32( Console.ReadLine ());
+string [] array = CreateArray (size);// Создание массива размером size
+Console.WriteLine ("Вы ввели следующий массив:");
+PrintArray (array);// Выводим введенный массив
+string [] newarray = new string [Memory(array)]; //новый массив с размером = результату функции Memory
+Console.WriteLine ("Результат:"); //Вывод результата
+PrintArray (WritingToNewArray(array, newarray));
 
