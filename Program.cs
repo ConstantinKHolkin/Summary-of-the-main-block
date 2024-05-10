@@ -47,4 +47,20 @@ int Memory (string [] array) //Функция для подсчета разме
     return memory;//возращаем счетчик
 }
 
+string [] WritingToNewArray (string [] array, string [] newarray) //Заполняем новый массив
+{
+    int j = 0; // переменныя для перебора нового массива
+    for (int i = 0; i < array.Length; i++) //перебор основного массива
+    {
+        string str = array [i];
+        if (str.Length <= 3) // Если символов в строке меньше или равно 3, то записываем в новый массив
+        {
+            newarray[j] = str;
+            j++;
+        }
+    }
+    return newarray;
+}
+
+
 
